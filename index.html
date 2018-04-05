@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta charset="utf8">
+		<title>Spectra</title>
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+		<link rel="stylesheet" href="css/student_style.css"/>
+		<script type="text/javascript" src="js/student_main.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+		<script src="js/google.fastbutton.js"></script>
+		<script src="js/jquery.google.fastbutton.js"></script>
+		<script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js" type="text/javascript"></script>
+		<style>
+			@import "css/student_reset.css";
+		</style>
+
+		
+	</head>	
+
+	<body>
+		<div id="home" class="sc selected">
+			<div class="dropdown">
+				<button class="hamburger">&#9776;</button>
+				<div class="dropdown-content">
+					<a>Alert Teacher</a>
+					<a>Share Settings</a>
+					<a>Class Mood</a>
+				</div>
+			</div>
+			
+			<div id="moodcontainer">
+				<button id="newMood" class="link slideleft" page-load="FeelingScreen">New Mood</button>
+			</div>
+			
+		</div>
+	
+		<div id="FeelingScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="home">Back</a>
+				<h1>I'm Feeling...</h1>
+			</header>
+			<div class="feelscontainer">
+				<div class="link slideleft feels" page-load="TypeScreen">Present</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Sad</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Happy</div>
+				<div class="link slideleft feels" page-load="TypeScreen">Angry</div>
+			</div>
+				
+		</div>
+
+		<div id="TypeScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="FeelingScreen">Back</a>
+				<h1>What type of feeling?</h1>
+			</header>
+			<div class="typecontainer">
+				<li class="link slideleft type" page-load="BecauseScreen">type1</li>
+				<li class="link slideleft type" page-load="BecauseScreen">type2</li>
+				<li class="link slideleft type" page-load="BecauseScreen">type3</li>
+			</div>
+		</div>
+
+		<div id="BecauseScreen" class="sc">
+			<header>
+				<a class="link slideright back" page-load="TypeScreen">Back</a>
+				<h1>Why so?</h1>
+				<textarea name="description" required placeholder="Why do you feel that way? Tell me more!"></textarea>
+				<input class="submit link slideleft" type="submit" name="submit" page-load="home">
+			</header>
+		</div>
+	</body>
+</html>
